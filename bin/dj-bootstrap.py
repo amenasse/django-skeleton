@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-setup python environment for ams.
+setup virtual environment
 requires virtualenv and pip to be installed.
 
 """

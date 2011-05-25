@@ -4,6 +4,14 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+
+# A tuple of IP addresses, as strings, that:
+#  * See debug comments, when DEBUG is True
+#  * Receive X headers if the XViewMiddleware is installed
+
+INTERNAL_IPS = ('127.0.0.1',)
+
+
 ADMINS = (
     ('anthony', 'amenasse@gmail.com'),
 )

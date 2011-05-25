@@ -10,15 +10,13 @@ import os
 import subprocess
 import shutil
 
+current_path = os.path.realpath(__file__)
 
-pwd = os.path.dirname(__file__)
+current_dir = os.path.dirname(current_path)
+project_name = current_dir.split(os.sep)[-2]
 
-vedir = os.path.join(pwd,"ve")
-
-if os.path.exists(vedir):
-    shutil.rmtree(vedir)
 
 subprocess.call(["pip","install",
-                    "-E",vedir,
+                    "-E",project_name,
                     "--ignore-installed",
-                    "--requirement",os.path.join(pwd,"../requirements.txt")])
+                    "--requirement",os.path.join(current_dir,"../requirements.txt")])

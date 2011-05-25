@@ -1,5 +1,4 @@
 # my custom pip requirements for django development
-nose
 PyYAML
 pygments
 ipython

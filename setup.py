@@ -7,9 +7,10 @@ setup(
   description = ''' my personal django settings ''',
   # package structure
   packages = ['skeleton',
-              'skeleton.template',
+              'skeleton.conf',
               ],
   #package_data={'skeleton': ['skeleton/*']},
+
 
 
 )

@@ -1,0 +1,2 @@
+# this gitignore file is for django project specific patterns
+*.db

@@ -37,5 +37,5 @@ setup(
   packages = packages.keys(),
   package_data = dict([(package,['*.txt']) for package in packages.keys() ]),
 
-  scripts =['skeleton/bin/django-createproject.py',],
+  scripts =['django_skeleton/bin/django-createproject.py',],
 )

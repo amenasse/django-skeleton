@@ -24,7 +24,7 @@ import re
 from random import choice
 from importlib import import_module
 import shutil
-import skeleton
+import django_skeleton
 
 class CommandError(Exception):
     pass
@@ -86,7 +86,7 @@ def copy_helper(app_or_project, name, directory, other_name=''):
     # django.__path__[0] because we don't know into which directory
     # django has been installed.
 
-    template_dir = os.path.join(skeleton.__path__[0],'conf','%s_template' % app_or_project)
+    template_dir = os.path.join(django_skeleton.__path__[0],'conf','%s_template' % app_or_project)
 
     for d, subdirs, files in os.walk(template_dir):
         relative_dir = d[len(template_dir)+1:].replace('%s_name' % app_or_project, name)

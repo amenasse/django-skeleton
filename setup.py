@@ -35,7 +35,7 @@ setup(
   description = ''' my personal django settings ''',
   # package structure
   packages = packages.keys(),
-  package_data = dict([(package,['*.txt']) for package in packages.keys() ]),
+  package_data = dict([(package,['*.txt','bin/*']) for package in packages.keys() ]),
 
   scripts =['django_skeleton/bin/django-startproject.py',
             'django_skeleton/bin/django-startrepo.py',

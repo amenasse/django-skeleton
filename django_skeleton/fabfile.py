@@ -19,4 +19,7 @@ def create_django_project(project_name):
         import django_skeleton.conf
         source_template = os.path.realpath(django_skeleton.conf.__path__[0])
         local('rsync -av --exclude project_template %s/ %s' % (source_template,source_dir))
-        local('django-startproject.py %s' % project_name)
+
+    from django_skeleton.management import start_project
+    os.chdir(source_dir)
+    start_project(project_name)

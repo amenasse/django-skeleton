@@ -8,6 +8,8 @@ setup(
   # package structure
   packages = ['skeleton',
               'skeleton.conf',
+              'skeleton.conf.project_template',
               ],
+  package_data = {'skeleton.conf.project_template': ['*.txt']},
   scripts =['skeleton/bin/django-createproject.py',],
 )

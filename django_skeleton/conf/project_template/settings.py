@@ -109,9 +109,6 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates')
 )
 
-# static content root
-STATIC_DOC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',

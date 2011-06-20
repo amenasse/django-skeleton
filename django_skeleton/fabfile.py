@@ -28,5 +28,21 @@ def django_repo_init(repo_name,project_name=None):
     from django_skeleton.management import start_project
     if project_name is None:
         project_name = repo_name
+
+    old_dir = os.getcwd()
     os.chdir(dest)
     start_project(project_name)
+    os.chdir(old_dir)
+
+def setup_virtualenv(name):
+    """ create a new virtualenv and install initial packages """
+
+    virtualenv_wrapper = local("which virtualenvwrapper.sh",capture=True)
+    local("source %s  && mkvirtualenv --no-site-packages %s" % (virtualenv_wrapper,name))
+
+    cwd = os.getcwd()
+    project_dir = os.path.join(cwd,name)
+    requirements_file = os.path.join(project_dir,'src','requirements.txt')
+
+    with lcd(project_dir):
+        local('pip install -r %s' % requirements_file)

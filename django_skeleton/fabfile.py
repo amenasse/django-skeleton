@@ -44,5 +44,7 @@ def setup_virtualenv(name):
     project_dir = os.path.join(cwd,name)
     requirements_file = os.path.join(project_dir,'src','requirements.txt')
 
+    virtualenv_path = os.path.join(os.environ['WORKON_HOME'],name)
+
     with lcd(project_dir):
-        local('pip install -r %s' % requirements_file)
+        local('pip install -r %s -E %s' % (requirements_file,virtualenv_path))

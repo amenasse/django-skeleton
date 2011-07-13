@@ -140,7 +140,7 @@ INSTALLED_APPS = (
 
 # django debug toolbar configuration
 DEBUG_TOOLBAR_CONFIG = {}
-DEBUG_TOOLBAR_CONFIG['INTERCEPT_REDIRECTS'] = False
+DEBUG_TOOLBAR_CONFIG['INTERCEPT_REDIRECTS'] = True
 
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
